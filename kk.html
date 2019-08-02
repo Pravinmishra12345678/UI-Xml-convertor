@@ -1,0 +1,874 @@
+<!DOCTYPE>
+<html>
+  <head>
+<script src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing-api.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <h1>Form to Xml Convertor</h1>
+    <div class="col-xs-4">
+       <tr class="table-success">
+        <td width="200px" >Hotel Id:</td>
+        <td >
+          <input id = "Hotel_Id" type="text" name="aname" class="form-control" placeholder="Enter Id"><br>
+        </td>
+      </tr>
+       <tr class="table-success">
+        <td width="200px">Channel Booking Id:</td>
+        <td>
+          <input id = "Channel_Booking_Id" type="text" name="bname" class="form-control" placeholder="Enter Id"><br>
+        </td>
+      </tr>
+        <tr class="table-success">
+        <td width="200px">Currency :</td>
+        <br>
+        <td>
+          <select id="Currency" class="custom-select">
+            <option value="Rupees" selected="selected">Rupees</option>
+            <option value="Dollar">Dollar</option>
+            <option value=""  selected="selected">Enter Your Currency</option>
+          </select>
+        </td>
+      </tr>
+      <br>
+        <tr class="table-success">
+        <td width="200px">Booking:</td>
+        <br>
+        <td>
+          <select id="Booking" class="custom-select">
+            <option value="C" selected="selected">C</option>
+            <option value="M">M</option>
+            <option value="B" >B</option>
+            <option value="R">R</option>
+            <option value=""  selected="selected">Select Booking Status</option>
+          </select>
+        </td>
+      </tr>
+      <br>
+      <tr class="table-success">
+        <td width="200px">Channel Id:</td>
+        <br>
+        <td>
+          <select id="Channel" class="custom-select">
+            <option value="Yes" selected="selected">Yes</option>
+            <option value="No">No</option>
+            <option value="Yes" selected="selected">Yes</option>
+            <option value="No">No</option>
+            <option value=""  selected="selected">Select Channel Id</option>
+          </select>
+        </td>
+      </tr>
+      <br>
+            <tr class="table-success">
+        <td width="200px">Email:</td>
+        <br>
+        <td>
+          <select id="Email" class="custom-select">
+            <option value="Yes" selected="selected">Yes</option>
+            <option value="No">No</option>
+            <option value=""  selected="selected">Email?</option>
+          </select>
+        </td>
+      </tr>
+      <br>
+          <tr class="table-success">
+        <td width="200px">Payment Type:</td>
+        <br>
+        <td>
+          <select id="Payment_Type" class="custom-select">
+            <option value="CC" selected="selected">CC</option>
+            <option value="HC">HC</option>
+            <option value=""  selected="selected">Payment Type</option>
+          </select>
+        </td>
+      </tr>
+      <br>
+            <tr class="table-success">
+        <td width="200px">Total Amount:</td>
+        <td>
+          <input id = "Total_Amount" type="text" name="cname" class="form-control" placeholder="0.00"><br>
+        </td>
+      </tr>
+            <tr class="table-success">
+        <td width="200px">Comission:</td>
+        <td>
+          <input id = "Comission" type="text" name="dname" class="form-control" placeholder="0.00"><br>
+        </td>
+      </tr>
+            <tr class="table-success">
+        <td width="200px">Sell Amount:</td>
+        <td>
+          <input id = "Sell_Amount" type="text" name="ename" class="form-control" placeholder="0.00"><br>
+        </td>
+      </tr>
+      <tr class="table-success">
+  <td width="200px">FN:</td>
+  <td>
+    <input id = "FN" type="text" name="fname" class="form-control" placeholder="Mukesh"><br>
+  </td>
+</tr>
+<tr class="table-success">
+<td width="200px">LN:</td>
+<td>
+<input id = "LN" type="text" name="gname" class="form-control" placeholder="Bhoj"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Email:</td>
+<td>
+<input id = "Email" type="text" name="hname" class="form-control"   placeholder="Ex : mukesh@staah.com"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Mobile:</td>
+<td>
+<input id = "Mobile" type="text" name="iname" class="form-control" placeholder="9999999999"><br>
+</td>
+</tr>
+<tr class="table-success" >
+<td width="200px">Address:</td>
+<td>
+<input id = "Address" type="text" name="jname" class="form-control" placeholder="Angul,orisssa"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">City:</td>
+<td>
+<input id = "City" type="text" name="kname" class="form-control" placeholder="Angul"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Country:</td>
+<td>
+<input id = "Country" type="text" name="lname" class="form-control" placeholder="India"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Zip:</td>
+<td>
+<input id = "Zip" type="text" name="mname" class="form-control" placeholder="333333"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">CC Number:</td>
+<td>
+<input id = "cc_number" type="text" name="nname" class="form-control" placeholder="311"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">CC Type:</td>
+<td>
+<input id = "cc_type" type="text" name="oname" class="form-control"><br>
+</td>
+</tr>
+ <div id="clonedInput1" class="clonedInput">
+<strong><h3>Room_Info : </h3></strong>
+<br>
+<tr class="table-success">
+<td width="200px">Room Id:</td>
+<td>
+<input id = "room_id" type="text" name="pname" class="form-control" placeholder="1211"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Rate_id:</td>
+<td>
+<input id = "rate_id" type="text" name="qname" class="form-control" placeholder="1111"><br>
+</td>
+</tr>
+<tr class="table-success">
+  <td width="200px">No of Adult:</td>
+  <br>
+  <td>
+    <select id="no_of_adult" class="custom-select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="" selected = "selected" >0</option>
+    </select>
+  </td>
+</tr>
+<br>
+<tr class="table-success">
+  <td width="200px">No of Child:</td>
+  <br>
+  <td>
+    <select id="no_of_child" class="custom-select">
+      <option value="" selected="selected">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </td>
+</tr>
+<br>
+<tr class="table-success">
+<td width="200px">Check In:</td>
+<td>
+<input id = "Check_in" type="text" name="rname" class="form-control"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Check Out:</td>
+<td>
+<input id = "Check_out" type="text" name="sname" class="form-control"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Amount to :</td>
+<td>
+<input id = "Amount_to" type="text" name="tname" class="form-control" placeholder="2019-07-23" ><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Amount From:</td>
+<td>
+<input id = "Amount_from" type="text" name="uname" class="form-control" placeholder="2019-07-23"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Guest Fname:</td>
+<td>
+<input id = "Guest_fname" type="text" name="vname" class="form-control" placeholder="Pravin"><br>
+</td>
+</tr>
+
+<tr class="table-success">
+<td width="200px">Guest Lname:</td>
+<td>
+<input id = "Guest_lname" type="text" name="wname" class="form-control" placeholder="Mishra"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Tax Name:</td>
+<td>
+<input id = "Tax_name" type="text" name="xname" class="form-control"><br>
+</td>
+</tr>
+<tr class="table-success">
+<td width="200px">Tax Value:</td>
+<td>
+<input id = "Tax_value" type="text" name="yname" class="form-control"><br>
+</td>
+</tr>
+</div>
+</div>
+
+    <br>
+    <br>
+    <br>
+    <input type="button" class="buttonWidth btn btn-primary" id="btnAddressAdd" value="Add Room"/>
+    <button id="DownloadButton" class="btn btn-success">Create file</button>
+    <div class="header">
+    <h2 class="text-secondary">1</h2>
+  </div>
+    <div id="generated" style="display:none">
+      <h2>Pravin.xml</h2>
+      <a href="#" id="DownloadLink">Download</a>
+      <textarea id="ResultXml" style="width: 100%; height: 30em" readonly="readonly"></textarea>
+    </div>
+
+    <script type="text/javascript">
+      $(function(){
+
+          var button = document.getElementById("btnAddressAdd");
+
+          button.addEventListener("click", function() {
+              var sourceNode = document.getElementById("clonedInput1");
+              var node = duplicateNode(sourceNode, ["id", "name", "placeholder"]);
+              sourceNode.parentNode.appendChild(node);
+          }, false);
+
+
+          var counter = 0;
+          function duplicateNode(/*DOMNode*/sourceNode, /*Array*/attributesToBump) {
+              counter++;
+              var out = sourceNode.cloneNode(true);
+              if (out.hasAttribute("id")) { out["id"] = bump(out["id"]); }
+              var nodes = out.getElementsByTagName("*");
+              for (var i = 0, len1 = nodes.length; i < len1; i++) {
+                  var node = nodes[i];
+                  for (var j = 0, len2 = attributesToBump.length; j < len2; j++) {
+                      var attribute = attributesToBump[j];
+                      if (node.hasAttribute(attribute)) {
+                          node[attribute] = bump(node[attribute]);
+                      }
+                  }
+              }
+
+              function bump(/*String*/str) {
+                  return str + "_" + counter;
+              }
+
+              var b = counter + 1;
+              var c = 'room_id_' + counter;
+              var d = 'rate_id_' + counter;
+              var e = 'no_of_adult_' + counter;
+              var f = 'no_of_child_' + counter;
+              var g = 'Check_in_' + counter;
+              var h = 'Check_out_' + counter;
+              var i = 'Amount_to_' + counter;
+              var j = 'Amount_from_' + counter;
+              var k = 'Guest_fname_' + counter;
+              var l = 'Guest_lname_' + counter;
+              var m = 'Tax_name_' + counter;
+              var n = 'Tax_value_' + counter;
+            /*  $("h3").html(`"Room_Info ${counter} "`);*/
+              template = template + `<Room_Info>`;
+              template = template + `<room_id><?${c}?></room_id>`;
+              template = template + `<rate_id><?${d}?></rate_id>`;
+              template = template + `<no_of_adult><?${e}?></no_of_adult>`;
+              template = template + `<no_of_child><?${f}?></no_of_child>`;
+              template = template + `<Check_in><?${g}?></Check_in>`;
+              template = template + `<Check_out><?${h}?></Check_out>`;
+              template = template + `<Amount_to><?${i}?></Amount_to>`;
+              template = template + `<Amount_from><?${j}?></Amount_from>`;
+              template = template + `<Guest_fname><?${k}?></Guest_fname>`;
+              template = template + `<Guest_lname><?${l}?></Guest_lname>`;
+              template = template + `<Tax_name><?${m}?></Tax_name>`;
+              template = template + `<Tax_value><?${n}?></Tax_value>`;
+              template = template + `</Room_Info>`;
+              $("h2").html(`${counter+1} `);
+              return out;
+
+          }
+
+      })();
+
+
+    </script>
+<script>
+
+      $(function () {
+  $('#DownloadButton').click(update);
+});
+
+var template = [
+  '<?xml version="1.0"?>',
+  '<HotelReservation>',
+  '<Hotel_Id><?Hotel_Id?></Hotel_Id>',
+  '<Channel_Booking_Id><?Channel_Booking_Id?></Channel_Booking_Id>',
+  '<Currency><?Currency?></Currency>',
+  '<Booking><?Booking?></Booking>',
+  '<Channel><?Channel?></Channel>',
+  '<Email><?Email?></Email>',
+  '<Payment_Type><?Payment_Type?></Payment_Type>',
+  '<Total_Amount><?Total_Amount?></Total_Amount>',
+  '<Comission><?Comission?></Comission>',
+  '<Sell_Amount><?Sell_Amount?></Sell_Amount>',
+  '<Comission>',
+  '<FN><?FN?></FN>',
+  '<LN><?LN?></LN>',
+  '<Email><?Email?></Email>',
+  '<Mobile><?Mobile?></Mobile>',
+  '<Address><?Address?></Address>',
+  '<City><?City?></City>',
+  '<Country><?Country?></Country>',
+  '<Zip><?Zip?></Zip>',
+  '</Comission>',
+  '<Cc_info>',
+  '<cc_number><?cc_number?></cc_number>',
+  '<cc_type><?cc_type?></cc_type>',
+  '</Cc_info>',
+  '<Room_Info>',
+  '<room_id><?room_id?></room_id>',
+  '<rate_id><?rate_id?></rate_id>',
+  '<no_of_adult><?no_of_adult?></no_of_adult>',
+  '<no_of_child><?no_of_child?></no_of_child>',
+  '<Check_in><?Check_in?></Check_in>',
+  '<Check_out><?Check_out?></Check_out>',
+  '<Amount_to><?Amount_to?></Amount_to>',
+  '<Amount_from><?Amount_from?></Amount_from>',
+  '<Guest_fname><?Guest_fname?></Guest_fname>',
+  '<Guest_lname><?Guest_lname?></Guest_lname>',
+  '<Tax_name><?Tax_name?></Tax_name>',
+  '<Tax_value><?Tax_value?></Tax_value>',
+  ' </Room_Info>',
+].join('\r\n');
+function update() {
+  var variables = {
+    'Room': $('#Room').val(),
+    'Hotel_Id': $('#Hotel_Id').val(),
+    'SkipAutoActivation': $('#SkipAutoActivation').val(),
+    'SkipProductKey': $('#SkipProductKey').val(),
+    'Currency': $('#Currency').val(),
+    'Channel_Booking_Id': $('#Channel_Booking_Id').val(),
+    'Booking': $('#Booking').val(),
+    'Channel': $('#Channel').val(),
+    'Email': $('#Email').val(),
+    'Payment_Type': $('#Payment_Type').val(),
+    'Total_Amount': $('#Total_Amount').val(),
+    'Comission': $('#Comission').val(),
+    'Sell_Amount': $('#Sell_Amount').val(),
+    'cc_number': $('#cc_number').val(),
+    'cc_type': $('#cc_type').val(),
+    'Address': $('#Address').val(),
+    'Zip': $('#Zip').val(),
+    'Mobile': $('#Mobile').val(),
+    'FN': $('#FN').val(),
+    'LN': $('#LN').val(),
+    'Email': $('#Email').val(),
+    'Country': $('#Country').val(),
+    'cc_number': $('#cc_number').val(),
+    'cc_type': $('#cc_type').val(),
+    'room_id': $('#room_id').val(),
+    'rate_id': $('#rate_id').val(),
+    'no_of_adult': $('#no_of_adult').val(),
+    'no_of_child': $('#no_of_child').val(),
+    'Check_in': $('#Check_in').val(),
+    'Check_out': $('#Check_out').val(),
+    'Amount_to': $('#Amount_to').val(),
+    'Amount_from': $('#Amount_from').val(),
+    'Guest_fname': $('#Guest_fname').val(),
+    'Guest_lname': $('#Guest_lname').val(),
+    'Tax_name': $('#Tax_name').val(),
+    'Tax_value': $('#Tax_value').val(),
+    'City': $('#City').val(),
+    'room_id_1': $('#room_id_1').val(),
+    'rate_id_1': $('#rate_id_1').val(),
+    'no_of_adult_1': $('#no_of_adult_1').val(),
+    'no_of_child_1': $('#no_of_child_1').val(),
+    'Check_in_1': $('#Check_in_1').val(),
+    'Check_out_1': $('#Check_out_1').val(),
+    'Amount_to_1': $('#Amount_to_1').val(),
+    'Amount_from_1': $('#Amount_from_1').val(),
+    'Guest_fname_1': $('#Guest_fname_1').val(),
+    'Guest_lname_1': $('#Guest_lname_1').val(),
+    'Tax_name_1': $('#Tax_name_1').val(),
+    'Tax_value_1': $('#Tax_value_1').val(),
+    'City_1': $('#City_1').val(),
+    'room_id_2': $('#room_id_2').val(),
+    'rate_id_2': $('#rate_id_2').val(),
+    'no_of_adult_2': $('#no_of_adult_2').val(),
+    'no_of_child_2': $('#no_of_child_2').val(),
+    'Check_in_2': $('#Check_in_2').val(),
+    'Check_out_2': $('#Check_out_2').val(),
+    'Amount_to_2': $('#Amount_to_2').val(),
+    'Amount_from_2': $('#Amount_from_2').val(),
+    'Guest_fname_2': $('#Guest_fname_2').val(),
+    'Guest_lname_2': $('#Guest_lname_2').val(),
+    'Tax_name_2': $('#Tax_name_2').val(),
+    'Tax_value_2': $('#Tax_value_2').val(),
+    'City_2': $('#City_2').val(),
+    'room_id_3': $('#room_id_3').val(),
+    'rate_id_3': $('#rate_id_3').val(),
+    'no_of_adult_3': $('#no_of_adult_3').val(),
+    'no_of_child_3': $('#no_of_child_3').val(),
+    'Check_in_3': $('#Check_in_3').val(),
+    'Check_out_3': $('#Check_out_3').val(),
+    'Amount_to_3': $('#Amount_to_3').val(),
+    'Amount_from_3': $('#Amount_from_3').val(),
+    'Guest_fname_3': $('#Guest_fname_3').val(),
+    'Guest_lname_3': $('#Guest_lname_3').val(),
+    'Tax_name_3': $('#Tax_name_3').val(),
+    'Tax_value_3': $('#Tax_value_3').val(),
+    'City_3': $('#City_3').val(),
+    'room_id_4': $('#room_id_4').val(),
+    'rate_id_4': $('#rate_id_4').val(),
+    'no_of_adult_4': $('#no_of_adult_4').val(),
+    'no_of_child_4': $('#no_of_child_4').val(),
+    'Check_in_4': $('#Check_in_4').val(),
+    'Check_out_4': $('#Check_out_4').val(),
+    'Amount_to_4': $('#Amount_to_4').val(),
+    'Amount_from_4': $('#Amount_from_4').val(),
+    'Guest_fname_4': $('#Guest_fname_4').val(),
+    'Guest_lname_4': $('#Guest_lname_4').val(),
+    'Tax_name_4': $('#Tax_name_4').val(),
+    'Tax_value_4': $('#Tax_value_4').val(),
+    'City_4': $('#City_4').val(),
+    'room_id_5': $('#room_id_5').val(),
+    'rate_id_5': $('#rate_id_5').val(),
+    'no_of_adult_5': $('#no_of_adult_5').val(),
+    'no_of_child_5': $('#no_of_child_5').val(),
+    'Check_in_5': $('#Check_in_5').val(),
+    'Check_out_5': $('#Check_out_5').val(),
+    'Amount_to_5': $('#Amount_to_5').val(),
+    'Amount_from_5': $('#Amount_from_5').val(),
+    'Guest_fname_5': $('#Guest_fname_5').val(),
+    'Guest_lname_5': $('#Guest_lname_5').val(),
+    'Tax_name_5': $('#Tax_name_5').val(),
+    'Tax_value_5': $('#Tax_value_5').val(),
+    'City_5': $('#City_5').val(),
+    'room_id_6': $('#room_id_6').val(),
+    'rate_id_6': $('#rate_id_6').val(),
+    'no_of_adult_6': $('#no_of_adult_6').val(),
+    'no_of_child_6': $('#no_of_child_6').val(),
+    'Check_in_6': $('#Check_in_6').val(),
+    'Check_out_6': $('#Check_out_6').val(),
+    'Amount_to_6': $('#Amount_to_6').val(),
+    'Amount_from_6': $('#Amount_from_6').val(),
+    'Guest_fname_6': $('#Guest_fname_6').val(),
+    'Guest_lname_6': $('#Guest_lname_6').val(),
+    'Tax_name_6': $('#Tax_name_6').val(),
+    'Tax_value_6': $('#Tax_value_6').val(),
+    'City_6': $('#City_6').val(),
+    'room_id_7': $('#room_id_7').val(),
+    'rate_id_7': $('#rate_id_7').val(),
+    'no_of_adult_7': $('#no_of_adult_7').val(),
+    'no_of_child_7': $('#no_of_child_7').val(),
+    'Check_in_7': $('#Check_in_7').val(),
+    'Check_out_7': $('#Check_out_7').val(),
+    'Amount_to_7': $('#Amount_to_7').val(),
+    'Amount_from_7': $('#Amount_from_7').val(),
+    'Guest_fname_7': $('#Guest_fname_7').val(),
+    'Guest_lname_7': $('#Guest_lname_7').val(),
+    'Tax_name_7': $('#Tax_name_7').val(),
+    'Tax_value_7': $('#Tax_value_7').val(),
+    'City_7': $('#City_7').val(),
+    'room_id_8': $('#room_id_8').val(),
+    'rate_id_8': $('#rate_id_8').val(),
+    'no_of_adult_8': $('#no_of_adult_8').val(),
+    'no_of_child_8': $('#no_of_child_8').val(),
+    'Check_in_8': $('#Check_in_8').val(),
+    'Check_out_8': $('#Check_out_8').val(),
+    'Amount_to_8': $('#Amount_to_8').val(),
+    'Amount_from_8': $('#Amount_from_8').val(),
+    'Guest_fname_8': $('#Guest_fname_8').val(),
+    'Guest_lname_8': $('#Guest_lname_8').val(),
+    'Tax_name_8': $('#Tax_name_8').val(),
+    'Tax_value_8': $('#Tax_value_8').val(),
+    'City_8': $('#City_8').val(),
+    'room_id_9': $('#room_id_9').val(),
+    'rate_id_9': $('#rate_id_9').val(),
+    'no_of_adult_9': $('#no_of_adult_9').val(),
+    'no_of_child_9': $('#no_of_child_9').val(),
+    'Check_in_9': $('#Check_in_9').val(),
+    'Check_out_9': $('#Check_out_9').val(),
+    'Amount_to_9': $('#Amount_to_9').val(),
+    'Amount_from_9': $('#Amount_from_9').val(),
+    'Guest_fname_9': $('#Guest_fname_9').val(),
+    'Guest_lname_9': $('#Guest_lname_9').val(),
+    'Tax_name_9': $('#Tax_name_9').val(),
+    'Tax_value_9': $('#Tax_value_9').val(),
+    'City_9': $('#City_9').val(),
+    'room_id_10': $('#room_id_10').val(),
+    'rate_id_10': $('#rate_id_10').val(),
+    'no_of_adult_10': $('#no_of_adult_10').val(),
+    'no_of_child_10': $('#no_of_child_10').val(),
+    'Check_in_10': $('#Check_in_10').val(),
+    'Check_out_10': $('#Check_out_10').val(),
+    'Amount_to_10': $('#Amount_to_10').val(),
+    'Amount_from_10': $('#Amount_from_10').val(),
+    'Guest_fname_10': $('#Guest_fname_10').val(),
+    'Guest_lname_10': $('#Guest_lname_10').val(),
+    'Tax_name_10': $('#Tax_name_10').val(),
+    'Tax_value_10': $('#Tax_value_10').val(),
+    'City_10': $('#City_10').val(),
+    'room_id_11': $('#room_id_11').val(),
+    'rate_id_11': $('#rate_id_11').val(),
+    'no_of_adult_11': $('#no_of_adult_11').val(),
+    'no_of_child_11': $('#no_of_child_11').val(),
+    'Check_in_11': $('#Check_in_11').val(),
+    'Check_out_11': $('#Check_out_11').val(),
+    'Amount_to_11': $('#Amount_to_11').val(),
+    'Amount_from_11': $('#Amount_from_11').val(),
+    'Guest_fname_11': $('#Guest_fname_11').val(),
+    'Guest_lname_11': $('#Guest_lname_11').val(),
+    'Tax_name_11': $('#Tax_name_11').val(),
+    'Tax_value_11': $('#Tax_value_11').val(),
+    'City_11': $('#City_11').val(),
+    'room_id_12': $('#room_id_12').val(),
+    'rate_id_12': $('#rate_id_12').val(),
+    'no_of_adult_12': $('#no_of_adult_12').val(),
+    'no_of_child_12': $('#no_of_child_12').val(),
+    'Check_in_12': $('#Check_in_12').val(),
+    'Check_out_12': $('#Check_out_12').val(),
+    'Amount_to_12': $('#Amount_to_12').val(),
+    'Amount_from_12': $('#Amount_from_12').val(),
+    'Guest_fname_12': $('#Guest_fname_12').val(),
+    'Guest_lname_12': $('#Guest_lname_12').val(),
+    'Tax_name_12': $('#Tax_name_12').val(),
+    'Tax_value_12': $('#Tax_value_12').val(),
+    'City_12': $('#City_12').val(),
+    'room_id_13': $('#room_id_13').val(),
+    'rate_id_13': $('#rate_id_13').val(),
+    'no_of_adult_13': $('#no_of_adult_13').val(),
+    'no_of_child_13': $('#no_of_child_13').val(),
+    'Check_in_13': $('#Check_in_13').val(),
+    'Check_out_13': $('#Check_out_13').val(),
+    'Amount_to_13': $('#Amount_to_13').val(),
+    'Amount_from_13': $('#Amount_from_13').val(),
+    'Guest_fname_13': $('#Guest_fname_13').val(),
+    'Guest_lname_13': $('#Guest_lname_13').val(),
+    'Tax_name_13': $('#Tax_name_13').val(),
+    'Tax_value_13': $('#Tax_value_13').val(),
+    'City_13': $('#City_13').val(),
+    'room_id_14': $('#room_id_14').val(),
+    'rate_id_14': $('#rate_id_14').val(),
+    'no_of_adult_14': $('#no_of_adult_14').val(),
+    'no_of_child_14': $('#no_of_child_14').val(),
+    'Check_in_14': $('#Check_in_14').val(),
+    'Check_out_14': $('#Check_out_14').val(),
+    'Amount_to_14': $('#Amount_to_14').val(),
+    'Amount_from_14': $('#Amount_from_14').val(),
+    'Guest_fname_14': $('#Guest_fname_14').val(),
+    'Guest_lname_14': $('#Guest_lname_14').val(),
+    'Tax_name_14': $('#Tax_name_14').val(),
+    'Tax_value_14': $('#Tax_value_14').val(),
+    'City_14': $('#City_14').val(),
+    'room_id_15': $('#room_id_15').val(),
+    'rate_id_15': $('#rate_id_15').val(),
+    'no_of_adult_15': $('#no_of_adult_15').val(),
+    'no_of_child_15': $('#no_of_child_15').val(),
+    'Check_in_15': $('#Check_in_15').val(),
+    'Check_out_15': $('#Check_out_15').val(),
+    'Amount_to_15': $('#Amount_to_15').val(),
+    'Amount_from_15': $('#Amount_from_15').val(),
+    'Guest_fname_15': $('#Guest_fname_15').val(),
+    'Guest_lname_15': $('#Guest_lname_15').val(),
+    'Tax_name_15': $('#Tax_name_15').val(),
+    'Tax_value_15': $('#Tax_value_15').val(),
+    'City_15': $('#City_15').val(),
+    'room_id_16': $('#room_id_16').val(),
+    'rate_id_16': $('#rate_id_16').val(),
+    'no_of_adult_16': $('#no_of_adult_16').val(),
+    'no_of_child_16': $('#no_of_child_16').val(),
+    'Check_in_16': $('#Check_in_16').val(),
+    'Check_out_16': $('#Check_out_16').val(),
+    'Amount_to_16': $('#Amount_to_16').val(),
+    'Amount_from_16': $('#Amount_from_16').val(),
+    'Guest_fname_16': $('#Guest_fname_16').val(),
+    'Guest_lname_16': $('#Guest_lname_16').val(),
+    'Tax_name_16': $('#Tax_name_16').val(),
+    'Tax_value_16': $('#Tax_value_16').val(),
+    'City_16': $('#City_16').val(),
+    'room_id_17': $('#room_id_17').val(),
+    'rate_id_17': $('#rate_id_17').val(),
+    'no_of_adult_17': $('#no_of_adult_17').val(),
+    'no_of_child_17': $('#no_of_child_17').val(),
+    'Check_in_17': $('#Check_in_17').val(),
+    'Check_out_17': $('#Check_out_17').val(),
+    'Amount_to_17': $('#Amount_to_17').val(),
+    'Amount_from_17': $('#Amount_from_17').val(),
+    'Guest_fname_17': $('#Guest_fname_17').val(),
+    'Guest_lname_17': $('#Guest_lname_17').val(),
+    'Tax_name_17': $('#Tax_name_17').val(),
+    'Tax_value_17': $('#Tax_value_17').val(),
+    'City_17': $('#City_17').val(),
+    'room_id_18': $('#room_id_18').val(),
+    'rate_id_18': $('#rate_id_18').val(),
+    'no_of_adult_18': $('#no_of_adult_18').val(),
+    'no_of_child_18': $('#no_of_child_18').val(),
+    'Check_in_18': $('#Check_in_18').val(),
+    'Check_out_18': $('#Check_out_18').val(),
+    'Amount_to_18': $('#Amount_to_18').val(),
+    'Amount_from_18': $('#Amount_from_18').val(),
+    'Guest_fname_18': $('#Guest_fname_18').val(),
+    'Guest_lname_18': $('#Guest_lname_18').val(),
+    'Tax_name_18': $('#Tax_name_18').val(),
+    'Tax_value_18': $('#Tax_value_18').val(),
+    'City_18': $('#City_18').val(),
+    'room_id_19': $('#room_id_19').val(),
+    'rate_id_19': $('#rate_id_19').val(),
+    'no_of_adult_19': $('#no_of_adult_19').val(),
+    'no_of_child_19': $('#no_of_child_19').val(),
+    'Check_in_19': $('#Check_in_19').val(),
+    'Check_out_19': $('#Check_out_19').val(),
+    'Amount_to_19': $('#Amount_to_19').val(),
+    'Amount_from_19': $('#Amount_from_19').val(),
+    'Guest_fname_19': $('#Guest_fname_19').val(),
+    'Guest_lname_19': $('#Guest_lname_19').val(),
+    'Tax_name_19': $('#Tax_name_19').val(),
+    'Tax_value_19': $('#Tax_value_19').val(),
+    'City_19': $('#City_19').val(),
+    'room_id_20': $('#room_id_20').val(),
+    'rate_id_20': $('#rate_id_20').val(),
+    'no_of_adult_20': $('#no_of_adult_20').val(),
+    'no_of_child_20': $('#no_of_child_20').val(),
+    'Check_in_20': $('#Check_in_20').val(),
+    'Check_out_20': $('#Check_out_20').val(),
+    'Amount_to_20': $('#Amount_to_20').val(),
+    'Amount_from_20': $('#Amount_from_20').val(),
+    'Guest_fname_20': $('#Guest_fname_20').val(),
+    'Guest_lname_20': $('#Guest_lname_20').val(),
+    'Tax_name_20': $('#Tax_name_20').val(),
+    'Tax_value_20': $('#Tax_value_20').val(),
+    'City_20': $('#City_20').val(),
+    'room_id_21': $('#room_id_21').val(),
+    'rate_id_21': $('#rate_id_21').val(),
+    'no_of_adult_21': $('#no_of_adult_21').val(),
+    'no_of_child_21': $('#no_of_child_21').val(),
+    'Check_in_21': $('#Check_in_21').val(),
+    'Check_out_21': $('#Check_out_21').val(),
+    'Amount_to_21': $('#Amount_to_21').val(),
+    'Amount_from_21': $('#Amount_from_21').val(),
+    'Guest_fname_21': $('#Guest_fname_21').val(),
+    'Guest_lname_21': $('#Guest_lname_21').val(),
+    'Tax_name_21': $('#Tax_name_21').val(),
+    'Tax_value_21': $('#Tax_value_21').val(),
+    'City_21': $('#City_21').val(),
+    'room_id_22': $('#room_id_22').val(),
+    'rate_id_22': $('#rate_id_22').val(),
+    'no_of_adult_22': $('#no_of_adult_22').val(),
+    'no_of_child_22': $('#no_of_child_22').val(),
+    'Check_in_22': $('#Check_in_22').val(),
+    'Check_out_22': $('#Check_out_22').val(),
+    'Amount_to_22': $('#Amount_to_22').val(),
+    'Amount_from_22': $('#Amount_from_22').val(),
+    'Guest_fname_22': $('#Guest_fname_22').val(),
+    'Guest_lname_22': $('#Guest_lname_22').val(),
+    'Tax_name_22': $('#Tax_name_22').val(),
+    'Tax_value_22': $('#Tax_value_22').val(),
+    'City_22': $('#City_22').val(),
+    'room_id_23': $('#room_id_23').val(),
+    'rate_id_23': $('#rate_id_23').val(),
+    'no_of_adult_23': $('#no_of_adult_23').val(),
+    'no_of_child_23': $('#no_of_child_23').val(),
+    'Check_in_23': $('#Check_in_23').val(),
+    'Check_out_23': $('#Check_out_23').val(),
+    'Amount_to_23': $('#Amount_to_23').val(),
+    'Amount_from_23': $('#Amount_from_23').val(),
+    'Guest_fname_23': $('#Guest_fname_23').val(),
+    'Guest_lname_23': $('#Guest_lname_23').val(),
+    'Tax_name_23': $('#Tax_name_23').val(),
+    'Tax_value_23': $('#Tax_value_23').val(),
+    'City_23': $('#City_23').val(),
+    'room_id_24': $('#room_id_24').val(),
+    'rate_id_24': $('#rate_id_24').val(),
+    'no_of_adult_24': $('#no_of_adult_24').val(),
+    'no_of_child_24': $('#no_of_child_24').val(),
+    'Check_in_24': $('#Check_in_24').val(),
+    'Check_out_24': $('#Check_out_24').val(),
+    'Amount_to_24': $('#Amount_to_24').val(),
+    'Amount_from_24': $('#Amount_from_24').val(),
+    'Guest_fname_24': $('#Guest_fname_24').val(),
+    'Guest_lname_24': $('#Guest_lname_24').val(),
+    'Tax_name_24': $('#Tax_name_24').val(),
+    'Tax_value_24': $('#Tax_value_24').val(),
+    'City_24': $('#City_24').val(),
+    'room_id_25': $('#room_id_25').val(),
+    'rate_id_25': $('#rate_id_25').val(),
+    'no_of_adult_25': $('#no_of_adult_25').val(),
+    'no_of_child_25': $('#no_of_child_25').val(),
+    'Check_in_25': $('#Check_in_25').val(),
+    'Check_out_25': $('#Check_out_25').val(),
+    'Amount_to_25': $('#Amount_to_25').val(),
+    'Amount_from_25': $('#Amount_from_25').val(),
+    'Guest_fname_25': $('#Guest_fname_25').val(),
+    'Guest_lname_25': $('#Guest_lname_25').val(),
+    'Tax_name_25': $('#Tax_name_25').val(),
+    'Tax_value_25': $('#Tax_value_25').val(),
+    'City_25': $('#City_25').val(),
+    'room_id_26': $('#room_id_26').val(),
+    'rate_id_26': $('#rate_id_26').val(),
+    'no_of_adult_26': $('#no_of_adult_26').val(),
+    'no_of_child_26': $('#no_of_child_26').val(),
+    'Check_in_26': $('#Check_in_26').val(),
+    'Check_out_26': $('#Check_out_26').val(),
+    'Amount_to_26': $('#Amount_to_26').val(),
+    'Amount_from_26': $('#Amount_from_26').val(),
+    'Guest_fname_26': $('#Guest_fname_26').val(),
+    'Guest_lname_26': $('#Guest_lname_26').val(),
+    'Tax_name_26': $('#Tax_name_26').val(),
+    'Tax_value_26': $('#Tax_value_26').val(),
+    'City_26': $('#City_26').val(),
+    'room_id_27': $('#room_id_27').val(),
+    'rate_id_27': $('#rate_id_27').val(),
+    'no_of_adult_27': $('#no_of_adult_27').val(),
+    'no_of_child_27': $('#no_of_child_27').val(),
+    'Check_in_27': $('#Check_in_27').val(),
+    'Check_out_27': $('#Check_out_27').val(),
+    'Amount_to_27': $('#Amount_to_27').val(),
+    'Amount_from_27': $('#Amount_from_27').val(),
+    'Guest_fname_27': $('#Guest_fname_27').val(),
+    'Guest_lname_27': $('#Guest_lname_27').val(),
+    'Tax_name_27': $('#Tax_name_27').val(),
+    'Tax_value_27': $('#Tax_value_27').val(),
+    'City_27': $('#City_27').val(),
+    'room_id_28': $('#room_id_28').val(),
+    'rate_id_28': $('#rate_id_28').val(),
+    'no_of_adult_28': $('#no_of_adult_28').val(),
+    'no_of_child_28': $('#no_of_child_28').val(),
+    'Check_in_28': $('#Check_in_28').val(),
+    'Check_out_28': $('#Check_out_28').val(),
+    'Amount_to_28': $('#Amount_to_28').val(),
+    'Amount_from_28': $('#Amount_from_28').val(),
+    'Guest_fname_28': $('#Guest_fname_28').val(),
+    'Guest_lname_28': $('#Guest_lname_28').val(),
+    'Tax_name_28': $('#Tax_name_28').val(),
+    'Tax_value_28': $('#Tax_value_28').val(),
+    'City_28': $('#City_28').val(),
+    'room_id_29': $('#room_id_29').val(),
+    'rate_id_29': $('#rate_id_29').val(),
+    'no_of_adult_29': $('#no_of_adult_29').val(),
+    'no_of_child_29': $('#no_of_child_29').val(),
+    'Check_in_29': $('#Check_in_29').val(),
+    'Check_out_29': $('#Check_out_29').val(),
+    'Amount_to_29': $('#Amount_to_29').val(),
+    'Amount_from_29': $('#Amount_from_29').val(),
+    'Guest_fname_29': $('#Guest_fname_29').val(),
+    'Guest_lname_29': $('#Guest_lname_29').val(),
+    'Tax_name_29': $('#Tax_name_29').val(),
+    'Tax_value_29': $('#Tax_value_29').val(),
+    'City_29': $('#City_29').val(),
+    'room_id_30': $('#room_id_30').val(),
+    'rate_id_30': $('#rate_id_30').val(),
+    'no_of_adult_30': $('#no_of_adult_30').val(),
+    'no_of_child_30': $('#no_of_child_30').val(),
+    'Check_in_30': $('#Check_in_30').val(),
+    'Check_out_30': $('#Check_out_30').val(),
+    'Amount_to_30': $('#Amount_to_30').val(),
+    'Amount_from_30': $('#Amount_from_30').val(),
+    'Guest_fname_30': $('#Guest_fname_30').val(),
+    'Guest_lname_30': $('#Guest_lname_30').val(),
+    'Tax_name_30': $('#Tax_name_30').val(),
+    'Tax_value_30': $('#Tax_value_30').val(),
+    'City_30': $('#City_30').val(),
+
+
+  };
+  var newXml = template.replace(/<\?(\w+)\?>/g,
+    function(match, name) {
+      return variables[name];
+    });
+    newXml = newXml + '</HotelReservation>';
+
+
+  $('#ResultXml').val(newXml);
+  $('#DownloadLink')
+    .attr('href', 'data:text/xml;base64,' + btoa(newXml))
+    .attr('download', 'autounattended.xml');
+  $('#generated').show();
+}
+
+if (!window.btoa) {
+
+  btoa = function (input) {
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+    var result = '';
+    var chr1, chr2, chr3;
+    var enc1, enc2, enc3, enc4;
+    var i = 0;
+
+    do {
+      chr1 = input.charCodeAt(i++);
+      chr2 = input.charCodeAt(i++);
+      chr3 = input.charCodeAt(i++);
+
+      enc1 = chr1 >> 2;
+      enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+      enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+      enc4 = chr3 & 63;
+
+      if (isNaN(chr2)) {
+        enc3 = enc4 = 64;
+      } else if (isNaN(chr3)) {
+        enc4 = 64;
+      }
+
+      result += chars.charAt(enc1) + chars.charAt(enc2) + chars.charAt(enc3) + chars.charAt(enc4);
+    } while (i < input.length);
+
+    return result;
+  };
+}
+</script>
+
+  </body>
+</html>
